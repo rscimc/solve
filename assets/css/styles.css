@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Serif', serif;;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oxygen', sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+:root {
+  --light: #f5f1f0;
+  --mid: #edd25d;
+  --mid2: #F7Ce3E;
+  --dark: #636362;
+  --dark2: #1A2930;
+  --white: #ffffff;
+  --black: #0A1612;
+}
+
+/*To Top*/
+#top {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--mid2);
+  z-index: 100;
+  right: 4%;
+  bottom: 24%;
+  position: fixed;
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.5;
+  justify-content: center;
+  color: var(--dark2);
+  border: 4px solid var(--dark2);
+}
+
+#whatsappFixed {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  color: var(--white);
+  background-color: green;
+  z-index: 100;
+  right: 4%;
+  bottom: 15%;
+  position: fixed;
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/*Header*/
+header {
+  background-color: var(--light);
+}
+
+.header-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+
+.header ul {
+  display: flex;
+}
+
+.header a {
+  margin: 1rem;
+  color: var(--mid2);
+  font-size: 1.8rem;
+  transition: 0.5s;
+  font-weight: bolder;
+}
+
+.header a:hover {
+  color: var(--mid);
+}
+
+#btn-mobile {
+  display: none;
+}
+
+/*Banner*/
+.banner {
+  background-image: url("../images/banner.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h2 {
+  color: var(--black);
+  font-size: 2.5rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 10%;
+}
+
+/*New Services*/
+
+#services h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--mid2);
+  margin-top: 1%;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  text-align: center;
+  grid-gap: 1rem;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 1rem;
+
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+
+}
+
+.flip-card-front {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.flip-card-back {
+  background-color: var(--mid);
+  color: var(--black);
+  transform: rotateY(180deg);
+}
+
+.flip-card-front i {
+  margin: 1rem;
+  color: var(--mid);
+}
+
+.flip-card-front h3 {
+  margin-bottom: 1rem;
+}
+
+.flip-card-back h3 {
+  margin: 1rem;
+}
+
+.flip-card-back p {
+  padding: 1rem;
+}
+/*About*/
+.about {
+  background-image: linear-gradient(150deg, var(--mid), var(--light));
+  margin-top: 2rem;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: var(--black);
+  padding: 1.5rem 2rem;
+}
+
+.about img {
+  max-width: 10rem;
+  margin: 0rem 2rem;
+  border-radius: 1rem;
+}
+
+.about p {
+  padding: 2rem 2rem 6rem 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+/*Contato*/
+.contato {
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #fdfdfd;
+}
+
+.contato h2 {
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  color: var(--mid2);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 40%;
+  background-color: #fafafa;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--light);
+}
+
+.form input,
+.form textarea {
+  margin: 1rem auto;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  border-radius: 0.5rem;
+  width: 75%;
+}
+
+.form input[placeholder],
+.form textarea[placeholder] {
+  opacity: 0.8;
+  font-size: 1rem;
+  padding-left: 00.5rem;
+}
+
+.form input[type="submit"] {
+  background-color: var(--mid2);
+}
+
+.form input[type="submit"]:hover {
+  cursor: pointer;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.24),
+    0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19);
+}
+
+/*thanks*/
+.tks {
+  margin: 2rem auto 2rem;
+  text-align: center;
+  background-color: #fdfdfd;
+}
+
+.tks h2 {
+  font-size: 2.5rem;
+  padding: 2rem;
+  color: var(--dark2);
+}
+
+/*Footer*/
+footer {
+  display: flex;
+  background-color: var(--light);
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.whats {
+  font-size: 2rem;
+  color: var(--dark2);
+}
+
+.zap {
+  color: #34af23;
+}
+
+.footer-item h2 {
+  font-size: 1.9rem;
+}
+
+.dev {
+  font-size: 0.8rem;
+  color: var(--black);
+  text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 480px) {
+  /*Global*/
+  .container {
+    width: 100vw;
+  }
+
+  /*To Top*/
+  #top {
+    display: none;
+    visibility: hidden;
+  }
+
+  #whatsappFixed {
+    display: none;
+    visibility: hidden;
+  }
+
+  /*menu*/
+  .header-area {
+    justify-content: left;
+    padding: 1rem;
+  }
+
+  .header ul {
+    display: flex;
+  }
+
+  .header a {
+    color: var(--dark2);
+    font-size: 2rem;
+    font-weight: 700;
+    transition: 0.5s;
+  }
+
+  .header a:hover {
+    color: var(--mid2);
+  }
+
+  #btn-mobile {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    right: 0;
+    background-color: var(--light);
+    z-index: 99;
+    transition: 0.4s;
+    visibility: hidden;
+    overflow-y: hidden;
+    margin-top: 2rem;
+    opacity: 95%;
+    padding: 2rem;
+  }
+
+  #navBar.active .menu {
+    visibility: visible;
+  }
+
+  /*New Services*/
+  .service-container {
+    grid-template-columns: auto;
+    text-align: center;
+    grid-gap: 1rem;
+  }
+
+  .service-container {
+    flex-direction: column;
+  }
+
+  .service-container div {
+    width: 90vw;
+    margin: 0 auto 1rem auto;
+  }
+
+  
+  /*Contato*/
+  .form {
+    width: 100%;
+  }
+
+  /*Footer*/
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+  }
+
+  .footer-item {
+    width: 100%;
+  }
+}
